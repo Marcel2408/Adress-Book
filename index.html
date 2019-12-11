@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Adress book</title>
+        <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <!-- link to google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="agenda-img">
+            <header>
+                <h1>Adress book</h1>
+            </header> 
+            
+            <section id="input">
+                <form id="contact-form" class="contact-container">
+                    <input id="name" class="contact-data" type="text" placeholder="Name">
+                    
+                    <input id="surname" class="contact-data" type="text" placeholder="Surname">
+
+                    <input id="phone" class="contact-data" type="number" placeholder="Phone">
+                    
+                    <input id="adress" class="contact-data" type="text" placeholder="Adress">
+
+                    <input id="newContactBtn" class="btn" type="submit" value="New Contact">
+                </form>
+            </section>
+    
+        </div>
+
+        <main>
+    
+            <div class="search">
+                    <h2>Find your contact</h2>
+                    <input id="searchbar" type="text" name="search" placeholder="Search contact by name, surname, adress or phone..">
+            </div>
+
+            <section id="container">
+
+                <h2>Contact List</h2>
+                <div id="contacts">
+                    
+                </div>
+
+            </section>
+
+        </main>
+        <!-- link to javascript file -->
+        <script src="app.js"></script>
+    </body>
+
+</html>

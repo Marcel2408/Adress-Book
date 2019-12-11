@@ -1,0 +1,218 @@
+/* 
+color: #b8b8b8;
+color: #ff7315; 
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;  
+}
+
+body {
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: #f4f4f4;
+}
+
+/* --------------------------HEADER----------------- */
+#agenda-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(martha-dominguez-de-gouveia-9UtO1v50BYM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+
+header {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* --------------------------HEADINGS---------------------- */
+
+h1,h2 {
+    line-height: 150%;
+    font-size: 4rem;
+    color: #232020; 
+    font-weight: 300;
+    
+}
+
+h2 {
+    color: #3a3535;
+    font-size: 2rem;
+    margin: 40px;
+}
+
+/* ---------------------------NEW CONTACT---------------------- */
+
+section {
+    /* background-color: rgba(0, 100, 0, .1); */
+    background-color:  rgba(255, 115, 21, .7);
+    border-radius: 25px;
+    text-align: center;
+    margin: 100px;
+    box-shadow: 0/*topbottom*/ 30px/*leftright*/ 80px/*amount of blurr*/ 10px/*blurr length*/ rgba(0,0,0,.2);
+}
+
+#contacts {
+    margin: 5%;
+}
+
+.contact-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+.contact-data {
+    /* width: 40%; */
+    min-width: 400px;
+    margin: 8px;
+    padding-left: 15px;
+    font-family: inherit;
+    font-size: 80%;
+    border-radius: 25px;
+    border: 1px solid #3a3535;
+    color: #3a3535;
+    background-color: #f4f4f4;
+    letter-spacing: inherit;
+}
+
+/* -------------------------BUTTONS-------------------- */
+
+.btn {
+    cursor: pointer;
+}
+
+#newContactBtn {
+    display: inline-block;
+    font-family: inherit;
+    margin: 15px;
+    border-radius: 100px;
+    border: none;
+    padding: 7px 30px;
+    background-color: #3a3535;
+    color: #f4f4f4; 
+    transition: border 0.2s;
+    font-size: 80%;
+    letter-spacing: inherit;
+    border: 1px solid transparent;
+}
+
+#newContactBtn:hover {
+    border: 1px solid #f4f4f4;
+}
+
+.btn-delete {
+    color: #3a3535;
+    transition: border 0.2s;
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.btn-delete:hover {
+    border: 2px solid #3a3535;
+    border-radius: 50%;
+}
+
+/* ---------------------------MESSAGES-------------------- */
+
+.success,.error {
+    color: #f4f4f4;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+
+.success {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+
+/* ---------------------------MAIN-------------------- */
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+/* ------------------------SEARCH BAR----------------- */
+
+.search {
+    background-color:  rgba(255, 115, 21, .7);
+    border-radius: 25px;
+    box-shadow: 0/*topbottom*/ 30px/*leftright*/ 80px/*amount of blurr*/ 10px/*blurr length*/ rgba(0,0,0,.2);
+    padding: 3px 0;
+    margin: 100px auto;
+    width: 90%;
+    text-align: center;
+}
+
+#searchbar { 
+    padding:15px;  
+    width: 80%;
+    margin-bottom: 30px;
+    font-size: 80%;
+    letter-spacing: inherit;
+    font-family: inherit;
+    border: 1px solid #3a3535;
+    border-radius: 25px;
+    color: #3a3535;
+    background-color: #f4f4f4;
+    letter-spacing: inherit;
+} 
+
+/* ------------------------------CONTACTS---------------------- */
+
+#container {
+    background-color:  rgba(255, 115, 21, .7);
+    padding: 3px 0;
+    margin: 100px 10%;
+}
+
+#contacts {
+    margin: 5%;
+    
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-card {
+    flex: 1 1 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    font-size: 0.7em;
+    padding: 10px;
+    border-radius: 25px;
+    color: #3a3535;
+    background-color: #f4f4f4;
+    margin: 10px;
+    border: thin solid #232020;
+}
+
+.contacts p {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.emoji {
+    font-size: 20px;
+    margin-right: 3px;
+    color: #ff7315;
+}
