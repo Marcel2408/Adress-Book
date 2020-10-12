@@ -9,7 +9,7 @@ class Contact {
     addContactList() {
         //create new card
         const contacts = document.getElementById("contacts");
-        //create the div.contact-list 
+        //create the div.contact-list
         const contactList = document.createElement("div");
         contactList.className = "contact-list";
         //create the div.contact-card
@@ -54,7 +54,7 @@ class Contact {
         //show message on top of the form
         const container = document.getElementById("input");
         const form = document.getElementById("contact-form");
-        container.insertBefore(message, form);    
+        container.insertBefore(message, form);
         //disapear after 2 sec
         setTimeout(function() {
             document.querySelector(`.${type}`).remove();
@@ -67,8 +67,8 @@ class Contact {
         document.getElementById("surname").value = "";
         document.getElementById("phone").value = "";
         document.getElementById("adress").value = "";
-        
-    } 
+
+    }
 
     static deleteContact (target) {
         //if the garbage bin button is clicked, then delete the contact:
@@ -80,38 +80,55 @@ class Contact {
     static searchContact () {
         const search = document.getElementById("searchbar");
         const contactCards = document.getElementsByClassName("contact-card");
-        
+
         //input stores the value to lowercase to avoid case bugs
-        const input = search.value.toLowerCase(); 
+        const input = search.value.toLowerCase();
 
         //search through the array of contacts if input is included in any of the contacts
-        for (let i = 0; i < contactCards.length; i++) { 
+        for (let i = 0; i < contactCards.length; i++) {
             //if included, keep showing the contact
-            if (contactCards[i].textContent.toLowerCase().includes(input)) { 
-                contactCards[i].style.display="flex"; 
-                contactCards[i].nextElementSibling.style.display="inline-block";   
+            if (contactCards[i].textContent.toLowerCase().includes(input)) {
+                contactCards[i].style.display="flex";
+                contactCards[i].nextElementSibling.style.display="inline-block";
             }
-            // if not included, hide the contact 
-            else { 
+            // if not included, hide the contact
+            else {
                 contactCards[i].style.display="none";
-                contactCards[i].nextElementSibling.style.display="none";	 
-            } 
+                contactCards[i].nextElementSibling.style.display="none";
+            }
         }
     }
 }
+
+// SUBCLASS
+class InternationalContact extends Contact {
+  // call constructor
+  constructor (name, surname, phone, adress, nationality) {
+    // get properties from the superclass
+    super(name, surname, phone, adress);
+    // add the subclass properties
+    this.nationality = nationality;
+  }
+
+  sayHi () {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+}
+
+console.log(new InternationalContact('marcel', 'subi', 9834934, 'bcn', 'catalan'));
 
 //-----------------------EVENT LISTENERS----------------------
 
 //new contact
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     //get form values
-    const contactName = document.getElementById("name").value, 
+    const contactName = document.getElementById("name").value,
     contactSurname = document.getElementById("surname").value,
     contactPhone = document.getElementById("phone").value,
     contactAdress = document.getElementById("adress").value;
      //Intance of a contact
     const contact = new Contact(contactName, contactSurname, contactPhone, contactAdress);
-    
+
     //only created when at least name is added
     if (contactName === "") {
         // message of error
